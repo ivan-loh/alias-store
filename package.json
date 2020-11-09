@@ -1,0 +1,19 @@
+{
+  "name": "alias-store",
+  "version": "1.0.0",
+  "description": "stores ip aliases",
+  "main": "app.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scr1p7ed/alias-store.git"
+  },
+  "author": "ivan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/scr1p7ed/alias-store/issues"
+  },
+  "homepage": "https://github.com/scr1p7ed/alias-store#readme"
+}
