@@ -4,7 +4,8 @@
   "description": "stores ip aliases",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "bin/server",
+    "test": "NODE_ENV=test node_modules/mocha/bin/mocha --timeout 1000 --bail --exit --recursive test/"
   },
   "repository": {
     "type": "git",
@@ -27,5 +28,10 @@
   "engines": {
     "node": ">= 15.1.0",
     "npm": ">= 7.0.8"
+  },
+  "devDependencies": {
+    "chai": "*",
+    "chai-http": "*",
+    "mocha": "*"
   }
 }

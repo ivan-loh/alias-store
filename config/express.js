@@ -2,6 +2,7 @@
 
 
 const {
+  NODE_ENV,
   ROOT,
   ROOT_CONTROLLER = ROOT + 'app/controllers'
 } = require('./config');
@@ -22,7 +23,13 @@ module.exports = app => {
 
 
   // middlewares
-  app.use(morgan('dev'));
+
+  app.use(morgan('dev', {
+    skip: (req, res) => {
+      return NODE_ENV === 'test';
+    }
+  }));
+
   app.use(helmet());
   app.use(cors());
   app.use(compression());

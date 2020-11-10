@@ -12,6 +12,14 @@ const app     = express();
 
 require('./config/express')(app);
 
-app.listen(PORT, () => {
-  console.log('App started listening on ' + PORT + " ... ");
-});
+module.exports = {
+
+  app: app,
+
+  start: () => {
+    app.listen(PORT, () => {
+      console.log('App started listening on ' + PORT + " ... ");
+    });
+  }
+
+};
