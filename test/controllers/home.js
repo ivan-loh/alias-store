@@ -14,12 +14,18 @@ describe('controller - /', () => {
 
   it('should respond with something', async () => {
 
-    const res = await chai.request(app).get('/');
+    try {
 
-    res.should.have.status(200);
-    res.body.should.not.be.empty;
+      const res = await chai.request(app).get('/');
 
-    return;
+      res.should.have.status(200);
+      res.body.should.not.be.empty;
+
+      return nil;
+
+    } catch (error) {
+      return error;
+    }
 
   });
 
