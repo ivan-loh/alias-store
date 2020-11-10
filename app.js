@@ -2,7 +2,7 @@
 
 
 const {
-  APP_PORT
+  PORT
 } = require('./config/config');
 
 
@@ -12,6 +12,6 @@ const app     = express();
 
 require('./config/express')(app);
 
-app.listen(APP_PORT, () => {
-  console.log('App started listening on ' + APP_PORT + " ... ");
+app.listen(PORT, () => {
+  console.log('App started listening on ' + PORT + " ... ");
 });
