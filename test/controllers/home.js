@@ -12,14 +12,15 @@ chai.should();
 
 describe('controller - /', () => {
 
-  it('should respond', done => {
-    chai
-      .request(app)
-      .get('/')
-      .then( res => {
-        res.should.have.status(200);
-        done();
-      });
+  it('should respond with something', async () => {
+
+    const res = await chai.request(app).get('/');
+
+    res.should.have.status(200);
+    res.body.should.not.be.empty;
+
+    return;
+
   });
 
 });
